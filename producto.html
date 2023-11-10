@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Coconut</title>
+    <link rel="icon" type="image/jpg" href="log.png">
+    <style>
+    /*Parte de La Cabecera */
+        body {
+            margin:0px;/*proceso de responsividad para celular*/
+            background-image: url("img/fond3.png");/* Imagen de fondo*/
+            background-repeat: no-repeat;/* La imagen de fondo no se repite.*/
+            background-position: center;/* imagen centreada*/
+            background-attachment: fixed;/*Cuando hacemos scroll la imagen de fondo se desplaza.*/
+            background-size: cover;/*Escala el ancho de la imagen de fondo al ancho del elemento.*/
+            
+        }
+        .menu {
+            position:fixed;/*siempre aparecerá en la misma posición.*/ 
+            top:0px; /*Posicion de la parte de arriba*/
+            left:0px;/*Posicion de la parte de izquierda*/
+            box-sizing:content-box;/*Le proporciona el comportamiento de tamaño de cuadro CSS predeterminado. */
+            margin: 0px;/* margenes de la pagina (elementos sin bordes)*/
+            padding:0px; /* espacio entre el contenido y el borde del elemento (elementos con bordes)*/
+            width:100%;/*Posicion del ancho*/
+        }
+        .menu>nav{
+            box-sizing:content-box;
+            margin: 0px;
+            padding:0px;
+            display:flex;/*Utiliza el modelo de cajas flexibles de CSS. Ideal para estructuras de 1 dimensión.*/
+            flex-direction: column;/*Cambia la orientación del eje principal. Establece la dirección del eje principal en vertical.*/
+        }
+        .menu>nav>a{
+            box-sizing:content-box;
+            margin: 0px;
+            padding:0px;
+            display:flex;
+            justify-content:center;/*Se utiliza para alinear los ítems del eje principal centro*/
+            align-items:center;/*Se utiliza para alinear los ítems al centro*/
+            width:100%;
+            height:40px;/*Posicion del alto*/
+            background-color: #0f97939c;/*Color del navbar*/
+            font:18px;/*Tamaño de la letra*/
+            font:'arial';/*Tipografia*/
+            color: #ffffff;/*color del texto*/
+            text-decoration:none;/*la funcion elimina la barra del texto*/
+            transition: all 0.2s;/*el timepo en cambiar el color del nabvar*/
+        }
+        .menu>nav>a:hover{
+            background-color:#f8ba46;/*Al pasar el mouse por el nabvar cambia de color*/
+            color: #1a7275;/*color de texto*/
+        }
+        @media screen and (min-width: 500px) /*proceso de responsividad para tablet*/
+        { .menu>nav     {flex-direction:row;/*Cambia la orientación del eje principal. Establece la dirección del eje principal en horizontal.*/}
+        #carrusel>article>img{height: 400px;}       
+        }
+        @media screen and (min-width: 900px) /*proceso de responsividad para pc*/
+        { .menu>nav{
+            margin: 0px 50px;/*margenes*/
+            border-radius: 0px 0px 10px 10px; /*bordes recondeados*/
+            overflow:hidden;/*Se oculta el contenido que sobresale.*/}                
+        }
+    /*Tipografia*/
+        div{
+            background-color: #000000af;
+            margin:70px;
+            border-radius: 10px 10px 10px 10px;/*Bordes redondeados*/ 
+            border: 5px double #ffffff;
+        }
+        h1{
+            color: #ffffff8f;/*Color del Texto*/
+            font-size: 24px;/*dimensión de la letra*/
+            text-align: center;/*alineacion del texto*/
+        }
+        p{
+            font-size: 20px;
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            margin: 20px;
+            color: #ffffff;/*hace un sangrado, en la primera línea del texto, desplazándolo la longitud especificada hacia la derecha*/
+        } 
+        pre{
+            text-indent: 25px;
+        }
+        th,
+        td {
+            border: 5px double #ffffff;
+            padding: 5px;
+    		width: 600px;
+    		height: 100px;
+            border-radius: 20px;
+            color: #ffffff;
+        }
+        li{
+            margin: 20px;
+            text-align: justify;
+        }
+    </style>
+</head>
+<body>
+    <header class="menu">
+        <nav> 
+            <a href="index.html"><img src="img/icono.png"width="50" height="30">Inicio</a>
+            <a href="producto.html"><img src="img/reg.png"width="30" height="30"/>Productos</a>
+            <a href="registro.html"><img src="img/g.gif"width="50" height="40"/>Registrate</a>
+        </nav>
+    </header>
+    <div>
+        <br>
+    <h1>MENÚ <br>"CONFITERIA COCONUT"</h1>
+    <section id="cuadro">
+    <p>Ofrece alimentos que son bunas para la salud utilizando lo natrual azucares naturales de las frutasmuy a menudo con frutos secos, frutas, miel y otros</p>
+    <table>
+        <tr>
+          <th> BEBIDAS<br>
+            <li>Frappé</li> 
+            <li>Malteada de Óreo</li>
+            <li>Malteada de pay de limón</li>
+            <li>Chamoyada</li>
+            <li>Capuccino helado saborizado</li>
+          </th>
+          <th>POSTRES<br>
+            <li>Hot cakes y waffles</li> 
+            <li>Crepas</li>
+            <li>Rosca de churros</li>
+            <li>Donas</li>
+            <li>Pays</li>
+          </th>
+        </tr>
+        <tr>
+            <th>EMPAREDADOS<br>
+            <li>Baguette</li> 
+            <li>Cuernito</li>
+            <li>Sándwich</li>
+            <li>Chapata</li>
+        </th>
+            <th>PASTELILLOS<br>
+            <li>Alfajor bañado en Chocolate</li> 
+            <li>Brazo Gitano</li>
+            <li>Queque de Platano</li>
+            <li>Pastel de Coco</li>
+            <li>Pastel de Piña</li></th>
+          </tr>            
+      </table>
+    </section>
+    </div>    
+
+    
+</body>
+</html>

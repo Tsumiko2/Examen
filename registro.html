@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Registro</title>
+    <link rel="icon" type="image/jpg" href="log.png">
+    <style>
+        /*Parte de La Cabecera */
+        body {
+            margin:0px;/*proceso de responsividad para celular*/
+            background-image: url("img/fond2.jpeg");/* Imagen de fondo*/
+            background-repeat: no-repeat;/* La imagen de fondo no se repite.*/
+            background-position: center center;/* imagen centreada*/
+            background-attachment: fixed;/*Cuando hacemos scroll la imagen de fondo se desplaza.*/
+            background-size: cover;/*Escala el ancho de la imagen de fondo al ancho del elemento.*/
+            
+        }
+        .menu {
+            position:fixed;/*siempre aparecerá en la misma posición.*/ 
+            top:0px; /*Posicion de la parte de arriba*/
+            left:0px;/*Posicion de la parte de izquierda*/
+            box-sizing:content-box;/*Le proporciona el comportamiento de tamaño de cuadro CSS predeterminado. */
+            margin: 0px;/* margenes de la pagina (elementos sin bordes)*/
+            padding:0px; /* espacio entre el contenido y el borde del elemento (elementos con bordes)*/
+            width:100%;/*Posicion del ancho*/
+        }
+        .menu>nav{
+            box-sizing:content-box;
+            margin: 0px;/*margenes*/
+            padding:0px;
+            display:flex;/*Utiliza el modelo de cajas flexibles de CSS. Ideal para estructuras de 1 dimensión.*/
+            flex-direction: column;/*Cambia la orientación del eje principal. Establece la dirección del eje principal en vertical.*/
+        }
+        .menu>nav>a{
+            box-sizing:content-box;
+            margin: 0px;/*margenes*/
+            padding:0px;
+            display:flex;
+            justify-content:center;/*Se utiliza para alinear los ítems del eje principal centro*/
+            align-items:center;/*Se utiliza para alinear los ítems al centro*/
+            width:100%;
+            height:40px;/*Posicion del alto*/
+            background-color: #0f97939c;/*Color del navbar*/
+            font:18px;/*Tamaño de la letra*/
+            font:'arial';/*Tipografia*/
+            color: #ffffff;/*color del texto*/
+            text-decoration:none;/*la funcion elimina la barra del texto*/
+            transition: all 0.2s;/*el timepo en cambiar el color del nabvar*/
+        }
+        .menu>nav>a:hover{
+            background-color:#f8ba46;/*Al pasar el mouse por el nabvar cambia de color*/
+            color: #1a7275;/*color de texto*/
+        }
+        @media screen and (min-width: 500px) /*proceso de responsividad para tablet*/
+        { .menu>nav     {flex-direction:row;/*Cambia la orientación del eje principal. Establece la dirección del eje principal en horizontal.*/}       
+        }
+        @media screen and (min-width: 900px) /*proceso de responsividad para pc*/
+        { .menu>nav{
+            margin: 0px 50px;/*margenes*/
+            border-radius: 0px 0px 10px 10px; /*bordes recondeados*/
+            overflow:hidden;/*Se oculta el contenido que sobresale.*/}                
+        }
+        h2
+        {
+            color: #fffdfbad;
+            font-size: 24px;
+            text-align: center;
+        }
+        p
+        {
+            font-size: 16px;
+            text-indent: 25px;
+        } 
+        div{
+            background-color: #3b1d0060;
+            border: 5px double #311902;
+            margin: 0 auto;/*margenes*/
+            width: 500px;
+            border-radius: 10px 10px 10px 10px;
+        }
+        pre
+        {
+            text-indent: 25px;
+        }
+        fieldset
+        {
+            border-radius: 10px; 
+            color: #ffffff;
+        }
+        input{
+            background-color: #dbbc8da1;
+            border: 1px double #a1610154;
+        }
+        button{
+            border-radius: 20px;
+            background-color: #946b49;
+            place-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="menu">
+        <nav> 
+            <a href="index.html"><img src="img/icono.png"width="50" height="30">Inicio</a>
+            <a href="producto.html"><img src="img/reg.png"width="30" height="30"/>Productos</a>
+            <a href="registro.html"><img src="img/g.gif"width="50" height="40"/>Registrate</a>
+        </nav>
+    </header> <br> <br>
+    <div>
+        <img src="img/fom.png" width="100%" height="200px"/>
+        <h2>FORMULARIO DE REGISTRO</h2>
+        <form action="" method="post" >
+            <fieldset>
+            <legend>Datos Personales:</legend>
+            <p>
+            <label for="nombre">Nombre</label>
+            <input type="text" name="nombre" id="nombre" />
+            </p>
+            <p>
+            <label for="apellidos">Apellidos</label>
+            <input type="text" name="apellidos" id="apellidos" />
+            </p>
+            <p>
+            <label for="nombre">Correo electrónico</label>
+            <input type="text" name="correo" id="correo" />
+            <p><center><button type="submit">Enviar</button></center></p>
+        </p>
+    </form>
+    <br>
+    </div>    
+
+    
+</body>
+</html>
